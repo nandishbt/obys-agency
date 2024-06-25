@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   
+ 
     
     
 }
@@ -9,7 +11,7 @@
 html,body{
     width: 100%;
     height: 100%;
-    background-color: #151515;
+    background-color: #000000;
     color: white;
     
 }
@@ -29,7 +31,7 @@ html,body{
 #loader{
     width: 100%;
     height: 100vh;
-    background-color: rgb(9, 9, 9);
+    background-color: rgb(0, 0, 0);
     position: fixed;
     padding: 20vh 7vw;
    
@@ -114,6 +116,8 @@ html,body{
     width: 100%;
     height: 100vh;
     /* background-color: #5b1c1c; */
+    background-color: #151515;
+  
    
 }
 
@@ -147,8 +151,14 @@ nav{
 .hero {
   width: 75%;
   margin-left: 25%;
+  overflow: hidden;
 
 }
+
+#hero1,#hero2,#hero3,#hero4{
+    overflow: hidden;
+}
+
 
 .hero h1{
     font-size: 7.5vw;
@@ -156,11 +166,38 @@ nav{
     text-transform: uppercase;
     font-family: 'poppins';
     font-weight: 400;
+    width: fit-content;
+  
 
 }
 
 .hero:nth-child(2){
     margin-top: 10vh;
+}
+
+.hero:nth-child(4){
+    display: flex;
+    align-items: flex-end;
+    transition: all ease .2s;
+    /* padding-bottom: 1vw; */
+    
+}
+
+.hero:nth-child(4) :hover {
+    /* margin-bottom: 1vw; */
+    -webkit-text-stroke: .1vw #fff;
+    color: transparent;
+    border-bottom: .5vw solid #00000099;
+    
+} 
+
+.bb{
+    border-bottom: .5vw solid #fff;
+  
+}
+
+#bar{
+    font-size: 5.6vw;
 }
 
 

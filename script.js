@@ -31,7 +31,6 @@ tl.to(".fix h2" , {
 
 tl.to("#loader" ,{
     opacity:0,
-    display:'none',
     delay:3
    
 })
@@ -39,17 +38,28 @@ tl.to("#loader" ,{
 tl.from("#page1" , {
     y:1300,
     opacity:0,
-    duration:.5,
+    duration:1,
     
    
+})
+
+tl.from("nav i,h5", {
+    opacity:0,
+    y:-100,
+    stagger:.1
+})
+
+tl.from(".hero h1",{
+    y:120,
+    stagger:.1
 })
 
 
 }
 
-loaderanimation()
 
-document.addEventListener("mousemove",(det)=>{
+function cursor(){
+    document.addEventListener("mousemove",(det)=>{
 
     gsap.to("#cursor",{
         x:det.x,
@@ -62,3 +72,9 @@ Shery.makeMagnet('nav h5,i' , {
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1,
   });
+}
+
+loaderanimation()
+cursor()
+
+
