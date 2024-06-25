@@ -1,6 +1,6 @@
 
 
-function loader(){
+function loaderanimation(){
 var count = 0;
 var c = document.querySelector("#count")
 
@@ -47,4 +47,18 @@ tl.from("#page1" , {
 
 }
 
-loader()
+loaderanimation()
+
+document.addEventListener("mousemove",(det)=>{
+
+    gsap.to("#cursor",{
+        x:det.x,
+        y:det.y
+    })
+})
+
+Shery.makeMagnet('nav h5,i' , {
+    //Parameters are optional.
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });
