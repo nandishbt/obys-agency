@@ -1,13 +1,19 @@
 
-
 function loaderanimation(){
 var count = 0;
 var c = document.querySelector("#count")
+// var body = document.querySelector("body")
+// body.style.overflow="hidden"
+
+
+
 
 var a = setInterval(()=>{
     count++;
     if(count === 100){
-        clearInterval(a)
+        clearInterval(a);
+      
+        
        
     }
     
@@ -31,9 +37,12 @@ tl.to(".fix h2" , {
 
 tl.to("#loader" ,{
     opacity:0,
+    // display:'none',
     delay:3
    
 })
+
+
 
 tl.from("#page1" , {
     y:1300,
@@ -55,6 +64,7 @@ tl.from(".hero h1",{
 })
 
 
+
 }
 
 
@@ -74,7 +84,32 @@ Shery.makeMagnet('nav h5,i' , {
   });
 }
 
+
+var vd = document.querySelector("#video-control")
+var flag = 0;
+vd.addEventListener("click",()=>{
+
+    if(flag ===0){
+        var imge = document.querySelector("#video-container img")
+        vd.innerHTML = `<i class="ri-pause-line"></i>`
+        imge.style.display= 'none'
+
+        flag = 1;
+    }
+
+    else{
+        var imge = document.querySelector("#video-container img")
+        vd.innerHTML = `<i class="ri-play-fill"></i>`
+        imge.style.display= 'initial'
+
+        flag = 0;
+    }
+   
+})
+
+
 loaderanimation()
+
 cursor()
 
 
