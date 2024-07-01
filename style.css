@@ -36,7 +36,7 @@ html,body{
     position: fixed;
     padding: 20vh 7vw;
     /* overflow: hidden; */
-    z-index: 0;
+    z-index: 999;
    
    
 
