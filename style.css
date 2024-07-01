@@ -121,6 +121,8 @@ html,body{
     height: 100vh;
     /* background-color: #5b1c1c; */
     background-color: #151515;
+  position: relative;
+
   
    
 }
@@ -156,7 +158,21 @@ nav{
   width: 75%;
   margin-left: 25%;
   overflow: hidden;
+  /* position: relative; */
+ 
 
+}
+
+.hero:nth-child(2)::before{
+    content: "01";
+    position: absolute;
+   left: 19%;
+   top: 20%;
+   font-size: 3vw;
+   font-style: italic;
+   
+   /* z-index: 999; */
+   
 }
 
 #hero1,#hero2,#hero3,#hero4{
@@ -272,6 +288,7 @@ nav{
     min-height: 100vh;
     background-color: #151515;
     padding-top: 10vh;
+    padding-bottom: 10vh;
     position: relative;
 
 }
@@ -281,6 +298,16 @@ nav{
     height: 100%;
     margin-left: 30%;
     position: relative;
+}
+
+#page4-container::before{
+    content: "03";
+    position: absolute;
+   left: -7%;
+   top: 1.5%;
+   font-size: 3vw;
+   font-style: italic;
+   
 }
 
 #page4-container>h1{
@@ -349,7 +376,144 @@ nav{
 }
 
 
+#page5{
+    width: 100%;
+   padding: 5vh 0;
+    background-color: #151515;
+   
+}
 
+.elem{
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 1vh;
+
+}
+
+.elem::-webkit-scrollbar{
+    display: none;
+}
+.elem h1{
+    display: inline-block;
+    margin-right: 26px;
+    font-size: 7vw;
+    text-transform: uppercase;
+    animation-name: Marq;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+
+
+}
+#elem1 h1{
+    display: inline-block;
+    margin-right: 26px;
+    font-size: 6.7vw;
+    text-transform: uppercase;
+    animation-name: Marq;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    animation-direction: reverse;
+
+
+}
+
+
+@keyframes Marq {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(calc(-100% - 30px));
+    }
+}
+
+/* page6css */
+
+#page6{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #151515;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    overflow: hidden;
+}
+
+
+
+#page6-container{
+    width: 70%;
+    height: 100%;
+    margin-left: 30%;
+    position: relative;
+}
+
+#page6-container::before{
+    content: "04";
+    position: absolute;
+   left: -7%;
+   top: 4%;
+   font-size: 3vw;
+   font-style: italic;
+
+}
+
+#page6-container>h1{
+    font-size: 8vw;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+
+#footer-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15vw;
+}
+
+.elem h5{
+    font-size: 1.3vw;
+    font-weight: 200;
+    line-height: 1.4vw;
+}
+
+.elem h6{
+    font-size: 1vw;
+    font-weight: 100;
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+}
+
+#fud{
+    margin: 20vh 0;
+}
+
+#fud{
+    margin-bottom: 5vh;
+}
+
+#page6-container h1{
+    text-transform: uppercase;
+    transition: all ease-in-out .2s;
+}
+
+#page6-container>h1:hover{
+    font-style: italic;
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    color: transparent;
+   transform: translateX(1%);
+    
+}
+#cp{
+    font-size: 1vw;
+}
 
 
 
