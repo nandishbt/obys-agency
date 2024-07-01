@@ -110,6 +110,6 @@ vd.addEventListener("click",()=>{
 
 loaderanimation()
 
-// cursor()
+cursor()
 
 
