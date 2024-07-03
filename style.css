@@ -305,9 +305,17 @@ nav{
    
 }
 
-
+#image-div{
+    position: relative;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .image-box{
+    flex-shrink: 0;
     width: 30vw;
     height: 60vh;
     overflow: hidden;
@@ -562,7 +570,7 @@ nav{
 }
 
 ._canvas_container{
-    z-index: 999999;
+    z-index: 99999999;
 }
 
 
