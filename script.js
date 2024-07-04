@@ -114,13 +114,27 @@ tl.from(".hero h1",{
 
 
 function cursor(){
-    document.addEventListener("mousemove",(det)=>{
+//     document.addEventListener("mousemove",(det)=>{
 
-    gsap.to("#cursor",{
-        x:det.x,
-        y:det.y
-    })
-})
+//     gsap.to("#cursor",{
+//         x:det.x,
+//         y:det.y
+//     })
+// })
+
+Shery.mouseFollower({
+    //Parameters are optional.
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+    // width: '2vw',
+    // height: '2vw',
+    // border-radius: '50%',
+    // border: '1px solid #fff',
+    // background:'transparent'
+    
+    
+  });
 
 Shery.makeMagnet('nav h5,i' , {
     //Parameters are optional.
@@ -132,13 +146,16 @@ Shery.makeMagnet('nav h5,i' , {
 
 function video(){
     var vd = document.querySelector("#video-control")
+    var vid = document.querySelector("#video-container video")
 var flag = 0;
 vd.addEventListener("click",()=>{
 
     if(flag ===0){
         var imge = document.querySelector("#video-container img")
         vd.innerHTML = `<i class="ri-pause-line"></i>`
-        imge.style.display= 'none'
+        imge.style.display= 'none';
+        vid.play()
+        
 
         flag = 1;
     }
@@ -147,6 +164,7 @@ vd.addEventListener("click",()=>{
         var imge = document.querySelector("#video-container img")
         vd.innerHTML = `<i class="ri-play-fill"></i>`
         imge.style.display= 'initial'
+        vid.pause()
 
         flag = 0;
     }
@@ -177,6 +195,20 @@ function page2shery(){
         
       });
 }
+
+function vdc(){
+    var vdC = document.querySelector("#video-container")
+    var vdCt = document.querySelector("#video-control")
+
+    vdC.addEventListener("mouseenter",(det)=>{
+        gsap.to("#video-control",{
+            x:det.x - 500,
+            y:det.y,
+        })
+    })
+}
+
+// vdc()
 
 video()
 page2shery()
