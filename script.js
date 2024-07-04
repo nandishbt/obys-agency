@@ -130,7 +130,8 @@ Shery.makeMagnet('nav h5,i' , {
 }
 
 
-var vd = document.querySelector("#video-control")
+function video(){
+    var vd = document.querySelector("#video-control")
 var flag = 0;
 vd.addEventListener("click",()=>{
 
@@ -151,6 +152,7 @@ vd.addEventListener("click",()=>{
     }
    
 })
+}
 
 
 
@@ -176,6 +178,7 @@ function page2shery(){
       });
 }
 
+video()
 page2shery()
 loaderanimation()
 
