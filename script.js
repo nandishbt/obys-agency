@@ -146,30 +146,8 @@ Shery.makeMagnet('nav h5,i' , {
 
 function video(){
     var vd = document.querySelector("#video-control")
-    var vid = document.querySelector("#video-container video")
-var flag = 0;
-vd.addEventListener("click",()=>{
+    
 
-    if(flag ===0){
-        var imge = document.querySelector("#video-container img")
-        vd.innerHTML = `<i class="ri-pause-line"></i>`
-        imge.style.display= 'none';
-        vid.play()
-        
-
-        flag = 1;
-    }
-
-    else{
-        var imge = document.querySelector("#video-container img")
-        vd.innerHTML = `<i class="ri-play-fill"></i>`
-        imge.style.display= 'initial'
-        vid.pause()
-
-        flag = 0;
-    }
-   
-})
 }
 
 
@@ -199,16 +177,64 @@ function page2shery(){
 function vdc(){
     var vdC = document.querySelector("#video-container")
     var vdCt = document.querySelector("#video-control")
+    var vid = document.querySelector("#video-container video")
+    var msf = document.querySelector(".mousefollower")
 
-    vdC.addEventListener("mouseenter",(det)=>{
-        gsap.to("#video-control",{
-            x:det.x - 500,
-            y:det.y,
+    vdC.addEventListener("mouseenter",()=>{
+        // msf.style.display = 'none';
+
+      vdC.addEventListener("mousemove",(det)=>{
+        gsap.to(".mousefollower" ,{
+            opacity:0
         })
+
+        gsap.to("#video-control",{
+            x:det.x - 1400,
+            y:det.y -70,
+        })
+      })
     })
+
+    var flag = 0;
+vdC.addEventListener("click",()=>{
+
+    if(flag ===0){
+        var imge = document.querySelector("#video-container img")
+        vdCt.innerHTML = `<i class="ri-pause-line"></i>`
+        imge.style.display= 'none';
+        vid.play()
+        
+
+        flag = 1;
+    }
+
+    else{
+        var imge = document.querySelector("#video-container img")
+        vdCt.innerHTML = `<i class="ri-play-fill"></i>`
+        imge.style.display= 'initial'
+        vid.pause()
+
+        flag = 0;
+    }
+   
+})
+
+vdC.addEventListener("mouseleave",()=>{
+    // vdC.addEventListener("mousemove",()=>{
+        // msf.style.opacity = 1;
+        // msf.style.display = 'initial';
+        gsap.to(".mousefollower" ,{
+            opacity:1
+        })
+      gsap.to("#video-control",{
+          x:'70%',
+          y:'-15%'
+      })
+    })
+  
 }
 
-// vdc()
+vdc()
 
 video()
 page2shery()

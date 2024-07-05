@@ -266,6 +266,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all ease .3s;
 }
 
 #video-control i{
