@@ -782,7 +782,7 @@ nav{
     padding: 20vh 0;
     position: relative;
     margin-bottom: 0vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 
 }
 
@@ -837,7 +837,7 @@ nav{
     padding: 7vh 2vw;
     
     margin-bottom: 0vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     /* margin-top: 25vh; */
     
 }
@@ -967,7 +967,7 @@ nav{
     padding-bottom: 10vh;
     position: relative;
     /* margin-top: 25vh; */
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 
 
 }
