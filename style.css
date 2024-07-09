@@ -118,11 +118,11 @@ html,body{
 
 #page1{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     /* background-color: #5b1c1c; */
     background-color: #151515;
   position: relative;
-  padding: 10vh 0;
+ 
 
   
    
@@ -651,6 +651,560 @@ nav{
 
 
 /* css query */
+
+@media(max-width:500px){
+    #page1{
+        width: 100%;
+        height: 100vh;
+      
+        background-color: #151515;
+      position: relative;
+      padding-top: 1px;
+     
+    
+   
+    
+      
+       
+    }
+    
+    nav{
+     
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 5.5vw 5vw;
+       
+      
+       
+   
+      
+       
+        
+    }
+    
+    #nav-left{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+     
+        width: 100%;
+        gap: 2vw;
+        color: #fff;
+      
+        
+    
+    }
+    
+    
+    #nav-right{
+       
+        display: none;
+    }
+    
+    
+    .hero {
+      width: 75%;
+      margin-left: 8%;
+      overflow: hidden;
+   
+     
+    
+    }
+    
+    .hero:nth-child(2)::before{
+        content: "01";
+        position: absolute;
+       left: 7%;
+       top: 35%;
+       font-size: 3vw;
+       font-style: italic;
+       
+   
+       
+    }
+    
+    #hero1,#hero2,#hero3,#hero4{
+        overflow: hidden;
+    }
+    
+    
+    .hero h1{
+        font-size: 10.5vw;
+        line-height: 11vw;
+        text-transform: uppercase;
+        font-family: 'poppins';
+        font-weight: 400;
+        width: fit-content;
+      
+    
+    }
+    
+    .hero:nth-child(2){
+        margin-top: 30vh;
+    }
+    
+    .hero:nth-child(4){
+        display: flex;
+        /* color: red; */
+        align-items: flex-end;
+        transition: all ease .2s;
+      
+        
+    }
+    
+    .hero:nth-child(4) :hover {
+       
+        -webkit-text-stroke: .1vw #fff;
+        color: transparent;
+        border-bottom: .5vw solid #00000099;
+        
+    } 
+    
+    .bb{
+        border-bottom: .5vw solid #fff;
+      
+    }
+    
+    #bar{
+        font-size: 5.6vw;
+    }
+
+
+
+    /* page 2 css */
+#page2{
+    background-color: #151515;
+ 
+    height: 80vh;
+    width: 100%;
+    padding: 20vh 0;
+    position: relative;
+    margin-bottom: 0vh;
+   
+
+}
+
+#video-container{
+    width: 98%;
+    height: 80%;
+    position: relative;
+    left: 0%;
+
+}
+
+#video-container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* z-index: 1; */
+    top:0;
+}
+
+#video-container video{
+    /* position: absolute ; */
+    width: 100%;
+    height: 100%;
+}
+
+#video-control{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: rgb(245, 245, 92);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .3s;
+}
+
+#video-control i{
+    font-size: 3.5vw;
+}
+
+
+/* page3 css */
+
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #151515;
+    padding: 7vh 2vw;
+    
+    margin-bottom: 0vh;
+  
+    
+}
+
+#page3>h1{
+    font-size: 8vw;
+    font-family: 'poppins';
+    font-weight: 500;
+    margin-left: 30%;
+    text-transform: uppercase;
+    position: relative;
+
+}
+
+#page3 .underline{
+    margin-left: 30%;
+
+}
+
+#page3>h1::before{
+    content: "02";
+    position: absolute;
+   left: -7%;
+   top: 1.5%;
+   font-size: 3vw;
+   font-style: italic;
+   
+}
+
+#image-div{
+    position: relative;
+    padding: 4vw;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15vw;
+}
+
+.image-box{
+    flex-shrink: 0;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.image-box:nth-child(1){
+    width: 100%;
+    height: 45vh;
+}
+
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.circle1{
+    width: 25vh;
+    height: 25vh;
+    border: .1vh solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25vh;
+    position: relative;
+    display: none;
+}
+
+.circle1 i{
+    font-size: 20vh;
+    font-weight: 100;
+}
+
+.circle1-in{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    opacity: 0;
+    transition: all ease .5s;
+ 
+
+}
+
+.circle1-in p{
+    width: 60%;
+    font-size: 1vw;
+    scale: 0;
+    opacity: 0;
+    transition: all ease .5s;
+    transition-delay: .5s;
+
+}
+
+.circle1:hover .circle1-in{
+        scale: 1;
+        opacity: 1;
+}
+
+.circle1:hover .circle1-in p{
+    scale: 1;
+    opacity: 1;
+}
+
+
+
+/* page4 css */
+
+#page4{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #151515;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    position: relative;
+ 
+
+
+}
+
+#page4-container{
+    width: 100%;
+    height: 100%;
+    margin-left: 20%;
+    position: relative;
+}
+
+#page4-container::before{
+    content: "03";
+    position: absolute;
+   left: -7%;
+   top: 1.5%;
+   font-size: 3vw;
+   font-style: italic;
+   
+}
+
+#page4-container>h1{
+    font-size: 8vw;
+    font-family: 'poppins';
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.underline{
+    width: 100%;
+    height: .2vh;
+    background-color: #ffffff83;
+    margin: 5vh 0;
+}
+
+#page4-container>p{
+    font-size: 2.2vw;
+    width: 75%;
+    font-family: 'poppins';
+    line-height: 2.8vw;
+    
+}
+
+#page4-flex{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7vh;
+    gap: 1vw;
+}
+
+#page4-flex img{
+    width: 68%;
+
+}
+
+#page4-flex p{
+    width: 75%;
+    font-size: 2.1vw;
+    font-weight: 400;
+    font-family: "Gilroy";
+}
+
+#page4-blue{
+    width: 75%;
+    padding: 4vw 3vw;
+    background-color: #3F7DF4;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 0%;
+}
+
+.page4-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2.1vw 1vw;
+    border-bottom: .1vw solid #ffffff99;
+    
+}
+
+.page4-elem h3{
+    font-weight: 600;
+    font-size: 1.5vw;
+}
+
+.page4-elem p{
+    width: 50%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+#page5{
+    width: 100%;
+   padding: 5vh 0;
+    background-color: #151515;
+    /* margin-top: 25vh; */
+    min-height: 50vh;
+
+   
+}
+
+.elem{
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 1vh;
+
+}
+
+.elem::-webkit-scrollbar{
+    display: none;
+}
+.elem h1{
+    display: inline-block;
+    margin-right: 26px;
+    font-size: 7vw;
+    text-transform: uppercase;
+    animation-name: Marq;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+
+
+}
+#elem1 h1{
+    display: inline-block;
+    margin-right: 26px;
+    font-size: 6.7vw;
+    text-transform: uppercase;
+    animation-name: Marq;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    animation-direction: reverse;
+
+
+}
+
+
+@keyframes Marq {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(calc(-100% - 30px));
+    }
+}
+
+
+/* page6css */
+
+#page6{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #151515;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+   
+    /* margin-bottom: 10vh; */
+
+}
+
+
+
+#page6-container{
+    width: 70%;
+    height: 100%;
+    margin-left: 30%;
+    position: relative;
+}
+
+#page6-container::before{
+    content: "04";
+    position: absolute;
+   left: -7%;
+   top: 1%;
+   font-size: 3vw;
+   font-style: italic;
+
+}
+
+#page6-container>h1{
+    font-size: 8vw;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+
+#footer-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+.elem h5{
+    font-size: 5.3vw;
+    font-weight: 200;
+    line-height: 5.3vw;
+}
+
+.elem h6{
+    font-size: 4.3vw;
+    font-weight: 100;
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+}
+
+#fud{
+    margin: 20vh 0;
+}
+
+#fud{
+    margin-bottom: 5vh;
+}
+
+#page6-container h1{
+    text-transform: uppercase;
+    transition: all ease-in-out .2s;
+}
+
+#page6-container>h1:hover{
+    font-style: italic;
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    color: transparent;
+   transform: translateX(1%);
+    
+}
+#cp{
+    font-size: 1vw;
+}
+
+
+}
 
 
 
